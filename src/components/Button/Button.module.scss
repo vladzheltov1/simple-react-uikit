@@ -1,0 +1,80 @@
+@import "../../styles/design.module";
+
+@mixin button {
+    border: none;
+    padding: 10px 22px;
+    color: var(--color-gray-0);
+    font-size: 14px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+    }
+    
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.8;
+    }
+}
+
+@mixin button_ghost {
+    color: var(--color-text);
+    background-color: var(--color-gray-0) !important;
+    box-shadow: inset 0 0 0 2px var(--color-gray-8);
+}
+
+@mixin set_color($color, $color-hover) {
+    background-color: $color;
+    &:hover {
+        background-color: $color-hover;
+    }
+}
+@mixin set_ghost($accent_color) {
+    @include button_ghost;
+    box-shadow: inset 0 0 0 2px $accent_color;
+
+    &:hover {
+        color: var(--color-gray-0);
+        background-color: $accent_color !important;
+    }
+}
+
+.button {
+    @include button;
+}
+.button_primary {
+    @include set_color($blue-100, $blue-80);
+    &_ghost {
+        @include set_ghost($blue-100);
+    }
+}
+.button_secondary {
+    @include set_color(#f0f0f0, #e2e2e2);
+    color: $gray-80;
+}
+.button_success {
+    @include set_color($green-100, $green-80);
+    &_ghost {
+        @include set_ghost($green-100);
+    }
+}
+.button_warning {
+    @include set_color($orange-100, $orange-80);
+    &_ghost {
+        @include set_ghost($orange-100);
+    }
+}
+.button_danger {
+    @include set_color($red-100, $red-80);
+    &_ghost {
+        @include set_ghost($red-100);
+    }
+}
+.button_dark {
+    @include set_color($gray-80, $gray-80);
+    &_ghost {
+        @include set_ghost($gray-80);
+    }
+}

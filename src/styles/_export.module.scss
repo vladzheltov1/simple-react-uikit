@@ -1,0 +1,54 @@
+@import "./design.module.scss";
+
+:export{
+    colorPrimary: var(--color-primary);
+    colorSecondary: var(--color-secondary);
+
+    colorSuccess: var(--color-success);
+    colorWarning: var(--color-warning);
+    colorError: var(--color-error);
+
+    colorGray0: var(--color-gray-0);
+    colorGray1: var(--color-gray-1);
+    colorGray2: var(--color-gray-2);
+    colorGray3: var(--color-gray-3);
+    colorGray4: var(--color-gray-4);
+    colorGray5: var(--color-gray-5);
+    colorGray6: var(--color-gray-6);
+    colorGray7: var(--color-gray-7);
+    colorGray8: var(--color-gray-8);
+    colorGray9: var(--color-gray-9);
+    colorGray10: var(--color-gray-10);
+    colorGray11: var(--color-gray-11);
+    colorGray12: var(--color-gray-12);
+    colorGray13: var(--color-gray-13);
+    colorGray14: var(--color-gray-14);
+    colorGray15: var(--color-gray-15);
+    colorGray16: var(--color-gray-16);
+    colorGray17: var(--color-gray-17);
+    colorGray18: var(--color-gray-18);
+    colorGray19: var(--color-gray-19);
+    colorGray20: var(--color-gray-20);
+
+    colorBgDarkPrimary: var(--color-bg-dark-primary);
+    colorBgDarkSecondary: var(--color-bg-dark-secondary);
+
+    colorBgLightPrimary: var(--color-bg-light-primary);
+    colorBgLightSecondary: var(--color-bg-light-secondary);
+
+    colorText: var(--color-text);
+    colorTextSecondary: var(--color-text-secondary);
+    colorLink: var(--color-link);
+    colorLinkActive: var(--color-link-active);
+
+    colorIcon: var(--color-icon);
+    colorIconSecondary: var(--color-icon-secondary);
+
+    fontFamilyPrimary: var(--font-family-primary);
+    fontFamilySecondary: var(--font-family-secondary);
+    fontFamilyHeaders: var(--font-family-headers);
+
+    fontSizeDefault: var(--font-size-default);
+    fontSizeMedium: var(--font-size-medium);
+    fontSizeLarge: var(--font-size-large);
+}

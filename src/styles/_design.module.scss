@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --color-primary: #005FF9;
+    --color-secondary: var(--color-gray-3);
+
+    --color-success: #0DC268;
+    --color-warning: #ED0A34;
+    --color-error: #FF9E00;
+
+    --color-gray-0: #FFFFFF;
+    --color-gray-1: #F9F9FA;
+    --color-gray-2: #F3F3F5;
+    --color-gray-3: #ECEDF0;
+    --color-gray-4: #E6E7EB;
+    --color-gray-5: #E0E1E6;
+    --color-gray-6: #DADCE0;
+    --color-gray-7: #D4D6DB;
+    --color-gray-8: #CFD1D6;
+    --color-gray-9: #CACCD1;
+    --color-gray-10: #4D4E52;
+    --color-gray-11: #484A4D;
+    --color-gray-12: #444547;
+    --color-gray-13: #3F4042;
+    --color-gray-14: #3A3B3D;
+    --color-gray-15: #363638;
+    --color-gray-16: #313133;
+    --color-gray-17: #2C2D2E;
+    --color-gray-18: #272829;
+    --color-gray-19: #232324;
+    --color-gray-20: #1E1E1F;
+
+    --color-bg-dark-primary: var(--color-gray-12);
+    --color-bg-dark-secondary: var(--color-gray-20);
+
+    --color-bg-light-primary: var(--color-gray-0);
+    --color-bg-light-secondary: var(--color-gray-5);
+
+    --color-text: var(--color-gray-17);
+    --color-text-secondary: var(--color-gray-10);
+    --color-link: #005BD1;
+    --color-link-active: #528FDF;
+
+    --color-icon: var(--color-gray-17);
+    --color-icon-secondary: var(--color-gray-9);
+
+    --font-family-primary: "Inter", sans-serif;
+    --font-family-secondary: "Roboto", sans-serif;
+    --font-family-headers: "Montserrat", sans-serif;
+
+    --font-size-default: 16px; 
+    --font-size-medium: 20px; 
+    --font-size-large: 24px; 
+}
