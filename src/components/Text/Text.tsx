@@ -34,6 +34,9 @@ export interface ITextProps {
     style?: CSSProperties
 }
 
+/**
+ * @param {ITextProps} props 
+ */
 export const Text: React.FC<ITextProps> = (props) => {
     const { 
         children = "",

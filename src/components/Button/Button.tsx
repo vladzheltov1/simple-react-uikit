@@ -51,6 +51,7 @@ export interface IButtonProps {
 
 /**
  * @todo добавить `iconLeft` и `iconRight`
+ * @param {IButtonProps} props
  */
 export const Button: React.FC<IButtonProps> = (props) => {
     const {
