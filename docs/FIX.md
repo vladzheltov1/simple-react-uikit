@@ -1,2 +1,7 @@
-Проверенные способы исправления некоторых ошибок
-- Cannot GET / - https://issuehunt.io/r/storybookjs/storybook/issues/14672
+#Проверенные способы исправления ошибок
+
+В данном файле представлены решения некоторых ошибок, связанных с конфигурацией `webpack`, `typescript` и `storybook`.
+  
+|#| Описание | Решение |
+|----------|----------|---------|
+|1|Запуск `npm run storybook` без ошибок, при загрузке страницы возникает `Cannot GET /`| Добавить `--no-manager-cache` после скрипта. [Подробнее здесь](https://issuehunt.io/r/storybookjs/storybook/issues/14672).|
