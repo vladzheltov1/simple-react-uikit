@@ -28,7 +28,8 @@ module.exports = {
                   'style-loader',
                   'css-loader',
                   'sass-loader',
-                ]
+                ],
+                exclude: "./src/styles/_export.module.scss"
               },
         ]
     }

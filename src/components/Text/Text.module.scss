@@ -1,0 +1,19 @@
+@import "../../styles/design.module";
+
+.text {
+    line-height: 1.2;
+    font-family: var(--font-family-primary);
+
+    &_bold {
+        font-weight: bold;
+    }
+    &_italic {
+        font-style: italic;
+    }
+    &_light {
+        font-weight: 300;
+    }
+    &_small{
+        color: var(--text-color-secondary);
+    }
+}
