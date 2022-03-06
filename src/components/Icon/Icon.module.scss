@@ -1,0 +1,42 @@
+
+// TODO: Change px for rem/em
+.icon {
+    display: inline-block;
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    &>{
+        position: absolute;
+    }
+
+    &_ns{
+        width: 8px;
+        height: 8px;
+    }
+    &_xs{
+        width: 10px;
+        height: 10px;
+    }
+    &_s{
+        width: 16px;
+        height: 16px;
+    }
+    &_m{
+        width: 18px;
+        height: 18px;
+    }
+    &_n{
+        width: 20px;
+        height: 20px;
+    }
+    &_l{
+        width: 22px;
+        height: 22px;
+    }
+}
+.icon::after {
+    visibility: hidden;
+    content: '\00A0';
+}
