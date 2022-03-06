@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import React from "react";
-import * as style from "./Button.module.scss";
+import React, { KeyboardEventHandler, MouseEventHandler } from "react";
+import style from "./Button.module.scss";
 
 export type ButtonAppearance =
     | "primary"
@@ -10,62 +10,73 @@ export type ButtonAppearance =
     | "warning"
     | "dark";
 
+export type ButtonType = "button" | "submit" | "reset"; 
+export type ButtonSize = "small" | "default" | "large";
+
+export type ContainerElement = HTMLButtonElement | HTMLAnchorElement;
+
 export interface IButtonProps {
-    /**
-     * Текст внутри кнопки
-     */
+    onKeyDown?: KeyboardEventHandler<ContainerElement>,
+    onKeyUp?: KeyboardEventHandler<ContainerElement>,
+    onClick?: MouseEventHandler<ContainerElement>,
+    onMouseDown?: MouseEventHandler<ContainerElement>,
+    onMouseUp?: MouseEventHandler<ContainerElement>,
+    onMouseLeave?: MouseEventHandler<ContainerElement>,
+    disabled?: boolean,
     children?: any,
 
     /**
-     * html-аттрибут у кнопки
+     * @default "button"
      */
-    type?: "button" | "submit" | "reset",
+     type?: ButtonType,
 
     /**
      * Вариация кнопки
+     * @default "primary"
      */
     appearance?: ButtonAppearance,
 
     /**
      * Визуальная вариация кнопки с белым фоном и цветной рамкой
+     * @default false
      */
     ghost?: boolean,
 
     /**
-     * Функция, которая будет вызвана при нажатии на кнопку
+     * Размер кнопки
+     * @default "default"
      */
-    onClick?: Function,
-
-    /**
-     * Выключение кнопки. Она будет видна, но не доступна для действий пользователя
-     */
-    disabled?: boolean
+    size?: ButtonSize
 }
 
+/**
+ * @todo добавить `iconLeft` и `iconRight`
+ */
 export const Button: React.FC<IButtonProps> = (props) => {
-
     const {
-        children,
+        appearance = "primary",
+        size = "default",
         type = "button",
-        appearance = "default",
         ghost = false,
-        onClick = () => void 0,
+        children,
+        onClick,
         ...restProps
-    } = props;
+    } = props as IButtonProps;
 
     const className = classNames(
         style["button"],
         style[`button_${appearance}`],
         {
             [style[`button_${appearance}_ghost`]]: ghost && appearance !== "secondary",
-            [style[`button_${appearance}`]]: appearance !== "default",
+            [style[`button_small`]]: size === "small",
+            [style[`button_large`]]: size === "large",
         }
     )
 
     return (
         <button
             type={type}
-            onClick={event => onClick(event)}
+            onClick={onClick}
             className={className}
             {...restProps}
         >

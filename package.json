@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
+  "scripts": {
+    "publish": "webpack && npm version patch && npm publish",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "keywords": [],
   "author": "Vladislav Zheltov",
   "license": "ISC",
