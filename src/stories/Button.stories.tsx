@@ -48,3 +48,9 @@ Dark.args = {
     ...defaultProps,
     appearance: "dark"
 };
+
+export const Round = Template.bind({});
+Round.args = {
+    ...defaultProps,
+    round: true
+};

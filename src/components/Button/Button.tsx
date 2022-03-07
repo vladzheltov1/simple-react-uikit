@@ -24,6 +24,7 @@ export interface IButtonProps {
     onMouseLeave?: MouseEventHandler<ContainerElement>,
     disabled?: boolean,
     children?: any,
+    round?: boolean,
 
     /**
      * @default "button"
@@ -59,8 +60,8 @@ export const Button: React.FC<IButtonProps> = (props) => {
         size = "default",
         type = "button",
         ghost = false,
+        round = false,
         children,
-        onClick,
         ...restProps
     } = props as IButtonProps;
 
@@ -71,13 +72,13 @@ export const Button: React.FC<IButtonProps> = (props) => {
             [style[`button_${appearance}_ghost`]]: ghost && appearance !== "secondary",
             [style[`button_small`]]: size === "small",
             [style[`button_large`]]: size === "large",
+            [style[`button_round`]]: round,
         }
     )
 
     return (
         <button
             type={type}
-            onClick={onClick}
             className={className}
             {...restProps}
         >
