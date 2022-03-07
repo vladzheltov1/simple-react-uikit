@@ -8,12 +8,12 @@ export type IconColor = "primary" | "secondary" | string;
 
 export interface IIconProps {
     /**
-     * SVG ONLY!
+     * SVG only
      */
     srcUrl?: string,
     
     /**
-     * SVG ONLY!
+     * SVG only
      */
     icon?: ReactNode,
     
@@ -23,11 +23,10 @@ export interface IIconProps {
 
 /**
  * @param {IIconProps} props 
- * @todo fix: component won't load because of the `getColor` function
  */
 export const Icon: FC<IIconProps> = (props) => {
     const {srcUrl, size="s", icon="", color="primary"} = props as IIconProps;
-
+    
     const styles = {
         backgroundImage: srcUrl,
         fill: getColor(color)

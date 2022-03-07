@@ -1,4 +1,4 @@
-import { design } from "../..";
+import design from "../../styles/_export.module.scss";
 import { TextColor, TextSize } from "./Text";
 
 type DefaultValues = {
@@ -9,8 +9,8 @@ type DefaultValues = {
 
 const colorDefaultValues = ["primary", "secondary"];
 const defaultColors: DefaultValues = {
-    primary: design.default.colorText,
-    secondary: design.default.colorTextSecondary
+    primary: design.colorText,
+    secondary: design.colorTextSecondary
 }
 export const getColor = (propColor: TextColor): string => {
     if(colorDefaultValues.includes(propColor)){
@@ -23,9 +23,9 @@ export const getColor = (propColor: TextColor): string => {
 
 const sizeDefaultValues = ["small", "default", "large"];
 const defaultSizes: DefaultValues = {
-    small: design.default.fontSizeSmall,
-    default: design.default.fontSizeDefault,
-    large: design.default.fontSizeLarge
+    small: design.fontSizeSmall,
+    default: design.fontSizeDefault,
+    large: design.fontSizeLarge
 }
 export const getSize = (propSize: TextSize): string | number => {
     if(typeof propSize === "string" && sizeDefaultValues.includes(propSize)){
