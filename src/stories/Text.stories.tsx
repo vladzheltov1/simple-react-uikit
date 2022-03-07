@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
-import { Text } from '../components/Text';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
+import { Text } from "../components/Text";
 
 export default {
-    title: 'Text',
+    title: "Text",
     component: Text,
 } as ComponentMeta<typeof Text>;
 

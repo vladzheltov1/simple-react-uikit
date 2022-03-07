@@ -70,11 +70,11 @@ export const Button: React.FC<IButtonProps> = (props) => {
         style[`button_${appearance}`],
         {
             [style[`button_${appearance}_ghost`]]: ghost && appearance !== "secondary",
-            [style[`button_small`]]: size === "small",
-            [style[`button_large`]]: size === "large",
-            [style[`button_round`]]: round,
+            [style["button_small"]]: size === "small",
+            [style["button_large"]]: size === "large",
+            [style["button_round"]]: round,
         }
-    )
+    );
 
     return (
         <button
@@ -84,5 +84,5 @@ export const Button: React.FC<IButtonProps> = (props) => {
         >
             {children}
         </button>
-    )
-}
+    );
+};

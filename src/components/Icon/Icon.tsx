@@ -3,7 +3,7 @@ import React, { CSSProperties, FC, ReactNode } from "react";
 import iconStyle from "./Icon.module.scss";
 import { getFill } from "./util";
 
-export type IconSize = 'ns' | 'xs' | 's' | 'm' | 'n' | 'l';
+export type IconSize = "ns" | "xs" | "s" | "m" | "n" | "l";
 export type IconFill = "primary" | "secondary" | string;
 
 export interface IIconProps {

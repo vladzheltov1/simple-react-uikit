@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
-import { CheckBox } from '../components/CheckBox';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
+import { CheckBox } from "../components/CheckBox";
 
 export default {
-    title: 'CheckBox',
+    title: "CheckBox",
     component: CheckBox,
 } as ComponentMeta<typeof CheckBox>;
 

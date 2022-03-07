@@ -1,4 +1,4 @@
-import design from "../../styles/_export.module.scss";
+import design from "styles/_export.module.scss";
 import { IconFill } from "./Icon";
 
 type DefaultValues = {

@@ -1,9 +1,9 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
-import { Loader } from '../components/Loader';
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
+import { Loader } from "../components/Loader";
 
 export default {
-    title: 'Loader',
+    title: "Loader",
     component: Loader,
 } as ComponentMeta<typeof Loader>;
 
