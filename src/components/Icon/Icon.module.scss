@@ -1,5 +1,3 @@
-
-// TODO: Change px for rem/em
 .icon {
     display: inline-block;
     position: relative;
@@ -7,35 +5,31 @@
     background-repeat: no-repeat;
     background-position: 50%;
 
-    &>{
+    &>svg{
         position: absolute;
         width: 100%;
         height: 100%;
     }
 
-    &_ns{
-        width: 8px;
-        height: 8px;
-    }
     &_xs{
-        width: 10px;
-        height: 10px;
+        width: 1rem;
+        height: 1rem;
     }
     &_s{
-        width: 16px;
-        height: 16px;
+        width: 2rem;
+        height: 2rem;
     }
     &_m{
-        width: 18px;
-        height: 18px;
+        width: 3rem;
+        height: 3rem;
     }
     &_n{
-        width: 20px;
-        height: 20px;
+        width: 4rem;
+        height: 4rem;
     }
     &_l{
-        width: 22px;
-        height: 22px;
+        width: 5rem;
+        height: 5rem;
     }
 }
 .icon::after {
