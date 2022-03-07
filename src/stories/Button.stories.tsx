@@ -54,3 +54,9 @@ Round.args = {
     ...defaultProps,
     round: true
 };
+
+export const Ghost = Template.bind({});
+Ghost.args = {
+    ...defaultProps,
+    ghost: true
+};
