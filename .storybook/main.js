@@ -1,4 +1,5 @@
 const path = require("path"); 
+const extConfig = require("../webpack.config");
 
 module.exports = {
   "stories": [
@@ -20,6 +21,7 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
+    config.resolve.alias = extConfig.resolve.alias;
 
     return config;
   },

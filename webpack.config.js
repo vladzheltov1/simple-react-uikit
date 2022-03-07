@@ -10,7 +10,11 @@ module.exports = {
         clean: true
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".scss"]
+        extensions: [".ts", ".tsx", ".scss"],
+        alias: {
+            styles: path.resolve(__dirname, "src/styles/"),
+            components: path.resolve(__dirname, "src/components")
+        }
     },
     externals: {
         react: "react"
@@ -29,7 +33,6 @@ module.exports = {
                   'css-loader',
                   'sass-loader',
                 ],
-                exclude: "./src/styles/_export.module.scss"
               },
         ]
     }
