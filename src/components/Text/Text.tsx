@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 import styles from "./Text.module.scss";
 import { getColor, getSize } from "./util";
 
@@ -24,7 +24,7 @@ export interface ITextProps {
      * HTML-тег
      */
     mode?: TextModes,
-    children: any,
+    children: ReactNode,
     bold?: boolean,
     size?: TextSize,
     light?: boolean,

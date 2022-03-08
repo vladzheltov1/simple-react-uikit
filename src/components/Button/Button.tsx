@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { KeyboardEventHandler, MouseEventHandler } from "react";
+import React, { KeyboardEventHandler, MouseEventHandler, ReactNode } from "react";
 import style from "./Button.module.scss";
 
 export type ButtonAppearance =
@@ -23,7 +23,7 @@ export interface IButtonProps {
     onMouseUp?: MouseEventHandler<ContainerElement>,
     onMouseLeave?: MouseEventHandler<ContainerElement>,
     disabled?: boolean,
-    children?: any,
+    children?: ReactNode,
     round?: boolean,
 
     /**
@@ -66,13 +66,13 @@ export const Button: React.FC<IButtonProps> = (props) => {
     } = props as IButtonProps;
 
     const className = classNames(
-        style["button"],
+        style.button,
         style[`button_${appearance}`],
         {
             [style[`button_${appearance}_ghost`]]: ghost && appearance !== "secondary",
-            [style["button_small"]]: size === "small",
-            [style["button_large"]]: size === "large",
-            [style["button_round"]]: round,
+            [style.button_small]: size === "small",
+            [style.button_large]: size === "large",
+            [style.button_round]: round,
         }
     );
 

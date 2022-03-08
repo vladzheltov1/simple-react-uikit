@@ -1,4 +1,4 @@
-import design from "../../styles/_export.module.scss";
+import design from "styles/_export.module.scss";
 import { TextColor, TextSize } from "./Text";
 
 type DefaultValues = {

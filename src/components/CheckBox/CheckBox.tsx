@@ -1,5 +1,11 @@
-import React, { FC, FocusEventHandler, FormEventHandler, MouseEventHandler, ReactNode, useState } from "react";
-import "../../styles/global.scss";
+import React, {
+    FC,
+    FocusEventHandler,
+    FormEventHandler,
+    MouseEventHandler,
+    ReactNode
+} from "react";
+import "styles/global.scss";
 import styles from "./CheckBox.module.scss";
 
 export interface ICheckBoxProps {
@@ -23,36 +29,18 @@ export const CheckBox: FC<ICheckBoxProps> = (props) => {
     const { 
         label = "",
         disabled = false,
-        checked,
-        onClick,
-        onFocus,
-        onMouseDown,
-        onMouseEnter,
-        onMouseLeave,
-        onMouseUp,
-        onChange
+        checked = false,
+        ...restProps
     } = props as ICheckBoxProps;
-
-    const [isChecked, setIsChecked] = useState(checked || false); 
-
-    const handleChange = () => {
-        setIsChecked(!isChecked);
-    }
-
+    
     return (
         <label className={styles.check}>
             <input 
                 className={`visually-hidden ${styles.check__input}`} 
                 disabled={disabled} 
-                checked={isChecked} 
+                checked={checked} 
                 type={"checkbox"}
-                onClick={onClick}
-                onFocus={onFocus}
-                onMouseDown={onMouseDown}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-                onMouseUp={onMouseUp}
-                onChange={onChange || handleChange}
+                {...restProps}
             />
             <span className={styles.check__box}></span>
             {label}
