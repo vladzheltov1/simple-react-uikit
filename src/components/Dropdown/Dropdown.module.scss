@@ -1,0 +1,7 @@
+// There's currently no crossplatform way to do this thing.
+// We can't just edit `option` style because it's a "replaced element".
+.dropdown *,
+.option{
+    border: none;
+    box-shadow: none;
+}

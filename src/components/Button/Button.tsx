@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React, { KeyboardEventHandler, MouseEventHandler, ReactNode } from "react";
+import { ContainerElement } from "../../types";
 import style from "./Button.module.scss";
 
 export type ButtonAppearance =
@@ -12,8 +13,6 @@ export type ButtonAppearance =
 
 export type ButtonType = "button" | "submit" | "reset"; 
 export type ButtonSize = "small" | "default" | "large";
-
-export type ContainerElement = HTMLButtonElement | HTMLAnchorElement;
 
 export interface IButtonProps {
     onKeyDown?: KeyboardEventHandler<ContainerElement>,

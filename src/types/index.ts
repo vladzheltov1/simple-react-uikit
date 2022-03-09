@@ -1,0 +1,1 @@
+export type ContainerElement = HTMLButtonElement | HTMLAnchorElement | HTMLInputElement;
