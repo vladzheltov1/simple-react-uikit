@@ -1,27 +1,40 @@
 .input{
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-small);
-    border: none;
-    border-radius: 0.2rem;
-    box-shadow: 0 0 0 0.1rem var(--color-gray-8);
-    background-color: var(--color-gray-0);
-    padding: 5px 8px;
-    transition: all 0.2s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 
-    &:hover:not([disabled]){
-        cursor: pointer;
-        box-shadow: 0 0 0 0.1rem var(--color-gray-10);
-    }
+    &__field{
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-small);
+        display: block;
+        border: none;
+        border-radius: 0.2rem;
+        box-shadow: 0 0 0 0.1rem var(--color-gray-8);
+        background-color: var(--color-gray-0);
+        padding: 5px 8px;
+        transition: all 0.2s ease-in-out;
 
-    &:focus:not([disabled]), &:active:not([disabled]){
-        box-shadow: 0 0 0 0.1rem var(--color-primary);
-    }
-
-    &:disabled{
-        background-color: var(--color-gray-5);
-
-        &:hover{
-            cursor: not-allowed;
+        &:hover:not([disabled]){
+            cursor: pointer;
+            box-shadow: 0 0 0 0.1rem var(--color-gray-10);
         }
+
+        &:focus:not([disabled]), &:active:not([disabled]){
+            box-shadow: 0 0 0 0.1rem var(--color-primary);
+        }
+
+        &:disabled{
+            background-color: var(--color-gray-5);
+
+            &:hover{
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    &__label{
+        font-size: 0.8rem !important;
+        color: var(--color-gray-6);
     }
 }

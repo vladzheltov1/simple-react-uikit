@@ -2,8 +2,9 @@ import classNames from "classnames";
 import React, { ChangeEventHandler, FC, KeyboardEventHandler, MouseEventHandler } from "react";
 import inputStyles from "styles/components/Input.module.scss";
 import { ContainerElement } from "../../types";
+import { Text } from "../Text";
 
-export type InputType = 
+export type InputType =
     | "color"
     | "date"
     | "datetime-local"
@@ -27,6 +28,12 @@ export interface IInputProps {
     value?: string,
     disabled?: boolean,
     placeholder?: string,
+    className?: string,
+
+    /**
+     * Текст, расположенный под полем ввода
+     */
+    label?: string,
     onChange?: ChangeEventHandler<ContainerElement>,
     onKeyDown?: KeyboardEventHandler<ContainerElement>,
     onKeyUp?: KeyboardEventHandler<ContainerElement>,
@@ -42,21 +49,27 @@ export const Input: FC<IInputProps> = (props) => {
         value = "",
         disabled = false,
         placeholder = "",
+        label,
         ...restProps
     } = props as IInputProps;
 
     const classList = classNames(
-        inputStyles.input
+        inputStyles.input__field
     )
 
     return (
-        <input 
-            type={type} 
-            value={value} 
-            disabled={disabled} 
-            className={classList}
-            placeholder={placeholder}
-            {...restProps}
-        />
+        <label className={inputStyles.input}>
+            <input
+                type={type}
+                value={value}
+                disabled={disabled}
+                className={classList}
+                placeholder={placeholder}
+                {...restProps}
+            />
+            {label && (
+                <Text className={inputStyles.input__label}>{label}</Text>
+            )}
+        </label>
     )
 }

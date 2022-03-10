@@ -3,8 +3,8 @@ import React from "react";
 import { Input } from "../components/Input";
 
 export default {
-	title: "Input",
-	component: Input,
+    title: "Input",
+    component: Input,
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
@@ -31,4 +31,9 @@ export const DisabledWithValue = Template.bind({});
 DisabledWithValue.args = {
     disabled: true,
     value: "Value"
+};
+
+export const WithLabel = Template.bind({});
+WithLabel.args = {
+    label: "Label"
 };
