@@ -6,11 +6,12 @@ module.exports = {
     output: {
         filename: "index.js",
         path: path.resolve(__dirname, "dist"),
+        globalObject: "this",
         library: {
             type: "umd",
             name: "simple-react-uikit"
         },
-        clean: true
+        clean: true,
     },
     resolve: {
         extensions: [".ts", ".tsx", ".scss"],
