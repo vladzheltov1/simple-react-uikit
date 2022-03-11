@@ -6,7 +6,10 @@ module.exports = {
     output: {
         filename: "index.js",
         path: path.resolve(__dirname, "dist"),
-        libraryTarget: "umd",
+        library: {
+            type: "umd",
+            name: "simple-react-uikit"
+        },
         clean: true
     },
     resolve: {

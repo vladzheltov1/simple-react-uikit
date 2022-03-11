@@ -6,10 +6,10 @@
         "strict": true,
         "esModuleInterop": true,
         "lib": ["ES2015", "DOM"],
-        "outDir": "./lib/",
+        "outDir": "./dist/",
         "sourceMap": true,
         "declaration": true,
     },
     "include": ["src", "declaration.d.ts"],
-    "exclude": ["node_modules", "lib"]
+    "exclude": ["node_modules", "dist"]
 }
