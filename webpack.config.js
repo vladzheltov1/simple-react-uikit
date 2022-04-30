@@ -1,16 +1,14 @@
 const path = require("path");
 
 module.exports = {
-    target: "node",
     mode: "production",
     entry: "./src/index.ts",
     output: {
-        globalObject: "this",
         filename: "index.js",
         path: path.resolve(__dirname, "dist"),
         library: {
             type: "umd",
-            name: "simple-react-uikit"
+            name: "simple-react-uikit",
         },
         clean: true,
     },
