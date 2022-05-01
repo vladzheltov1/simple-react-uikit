@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "commonjs",
+        "module": "UMD",
         "jsx": "react",
         "strict": true,
         "esModuleInterop": true,
@@ -9,6 +9,7 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "declaration": true,
+        "moduleResolution": "Node"
     },
     "include": ["src", "declaration.d.ts"],
     "exclude": ["node_modules", "dist"]
